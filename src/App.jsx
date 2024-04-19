@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./cart";
+import Nav from "./navbar";
+import Fetchdata from "./datafetching";
+
 
 function App() {
       const [count,setCount]= useState(0)
@@ -21,7 +24,11 @@ function App() {
 
   
   return (
-   <Cart
+
+   <>
+   <Nav/>
+    
+    <Cart
    
    count={count} 
    key={productArray.product}
@@ -30,9 +37,12 @@ function App() {
    productArray={productArray}
    handleRemove={handleRemove}
    setProductArray={setProductArray}
-
-
    />
+   
+    
+   <Fetchdata/>
+
+   </>
   );
 }
 

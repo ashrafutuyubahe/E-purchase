@@ -12,7 +12,7 @@ export default function Cart(props) {
         Reset
       </button>
       {props.productArray.map((item,index) => (
-        <div className="d-flex m-4 justify-content-" ke660f0b31fab4e9f864a7bee2y={index}>
+        <div className="d-flex m-4 justify-content-" key={index}>
           <input
             type="text"
             className="form-control w-25 bg-info"
