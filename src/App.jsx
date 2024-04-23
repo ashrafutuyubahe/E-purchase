@@ -4,6 +4,7 @@ import Cart from "./cart";
 import Nav from "./navbar";
 import Fetchdata from "./datafetching";
 import axios from "axios";
+import Calculator from "./simpleCalc";
 
 axios.defaults.baseURL = "http://127.0.0.1:6000";
 axios.defaults.withCredentials = true;
@@ -28,7 +29,7 @@ function App() {
 
   return (
     <>
-      <Nav />
+      {/* <Nav />
 
       <Cart
         count={count}
@@ -40,7 +41,8 @@ function App() {
         setProductArray={setProductArray}
       />
 
-      <Fetchdata />
+      <Fetchdata /> */}
+      <Calculator/>
     </>
   );
 }
