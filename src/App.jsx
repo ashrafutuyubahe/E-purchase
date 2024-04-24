@@ -5,6 +5,8 @@ import Nav from "./navbar";
 import Fetchdata from "./datafetching";
 import axios from "axios";
 import Calculator from "./simpleCalc";
+import FetchMovie from "./components/fetchmovie";
+
 
 axios.defaults.baseURL = "http://127.0.0.1:6000";
 axios.defaults.withCredentials = true;
@@ -26,12 +28,13 @@ function App() {
     );
     setProductArray(updatedProductArray);
   };
-
+ 
+  
   return (
     <>
-      {/* <Nav />
+      <Nav />
 
-      <Cart
+      {/* <Cart
         count={count}
         key={productArray.product}
         setCount={setCount}
@@ -41,8 +44,17 @@ function App() {
         setProductArray={setProductArray}
       />
 
-      <Fetchdata /> */}
-      <Calculator/>
+      <Fetchdata />
+      <Calculator/> */}
+      
+      <FetchMovie/>
+      
+      
+      
+    
+     
+
+
     </>
   );
 }
