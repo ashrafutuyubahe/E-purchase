@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Cart from "./cart";
-import Nav from "./navbar";
-import Fetchdata from "./datafetching";
+import Cart from "./components/cart";
+import Nav from "./components/navbar";
+import Fetchdata from "./components/datafetching";
 import axios from "axios";
-import Calculator from "./simpleCalc";
+import Calculator from "./components/simpleCalc";
 import FetchMovie from "./components/fetchmovie";
 
 
@@ -34,7 +34,7 @@ function App() {
     <>
       <Nav />
 
-      {/* <Cart
+      <Cart
         count={count}
         key={productArray.product}
         setCount={setCount}
@@ -45,7 +45,7 @@ function App() {
       />
 
       <Fetchdata />
-      <Calculator/> */}
+      <Calculator/>
       
       <FetchMovie/>
       

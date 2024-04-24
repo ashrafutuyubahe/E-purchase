@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+
 export default function FetchMovie() {
   const apiUrl =
     "https://api.themoviedb.org/3/discover/movie?api_key=38868210c902bc6cad8040a281134b8b";
@@ -29,13 +30,14 @@ export default function FetchMovie() {
         movies.map((movie) => (
          <a  href="#">
            <img
+           className="movie"
             key={movie.id}
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
              style={{width:"300px",height:"250px", marginLeft:"10px",marginTop:"10px"}}
-          
+            
           />
-         
+            
         
          </a>
         ))}
