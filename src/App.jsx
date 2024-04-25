@@ -45,8 +45,9 @@ function App() {
     <>
       <Nav />
       {component}
+     
 
-      <Cart
+      {/* <Cart
         count={count}
         key={productArray.product}
         setCount={setCount}
@@ -57,7 +58,7 @@ function App() {
       />
 
       <Fetchdata />
-      <Calculator />
+      <Calculator /> */}
 
       <FetchMovie />
     </>
