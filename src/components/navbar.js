@@ -1,6 +1,9 @@
 import React from "react";
-import "./nav.css";
+import  "./nav.css";
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link } from "react-router-dom";
+
 
 
 export default function nav() {
@@ -8,10 +11,9 @@ export default function nav() {
   <>
   <nav className="navbar">
       <div className="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Store</a>
-      <a href="#">Login</a>
-      <a href="#">Register</a>  
+      <Link  className=" link-1 m-3" to="/login" >Login</Link>
+      <Link to="/register" className="link-2 m-3"  >Register</Link>
+      
       </div>
     <input  type="text" placeholder="search..." id="search"></input>
     <span className="icon">

@@ -9,7 +9,7 @@
     padding: 0 2rem; 
   }
   
-  .nav-links a {
+  .nav-links link {
     text-decoration: none;
     margin-left: 2rem; 
     color: white; 
@@ -19,6 +19,10 @@
     border-radius: 0.2rem;
     border-style: none;
     height: 20px;
+  }
+  
+.link-1 ,.link-2{
+    text-decoration: none;
   }
   
  
