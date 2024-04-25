@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
 .navbar {
     display: flex;
     align-items: center; /* Align items vertically */
@@ -9,7 +15,7 @@
     padding: 0 2rem; 
   }
   
-  .nav-links link {
+  .nav-links a {
     text-decoration: none;
     margin-left: 2rem; 
     color: white; 
@@ -21,8 +27,6 @@
     height: 20px;
   }
   
-.link-1 ,.link-2{
-    text-decoration: none;
-  }
+
   
  

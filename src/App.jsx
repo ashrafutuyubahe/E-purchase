@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./components/cart";
 import Nav from "./components/navbar";
@@ -31,31 +29,38 @@ function App() {
     );
     setProductArray(updatedProductArray);
   };
+  console.log(window.location);
+  let component;
+  switch (window.location.pathname) {
+    case "/login":
+      component = <Login />;
+      break;
+    case "/register":
+      component = <RenderRegister />;
+      break;
+   
+  }
 
   return (
-    <Router>
-      <>
-        <Nav />
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={RenderRegister} />
-          <Route path="/">
-            <Cart
-              count={count}
-              key={productArray.product}
-              setCount={setCount}
-              handleReset={handleReset}
-              productArray={productArray}
-              handleRemove={handleRemove}
-              setProductArray={setProductArray}
-            />
-            <Fetchdata />
-            <Calculator />
-            <FetchMovie />
-          </Route>
-        </Switch>
-      </>
-    </Router>
+    <>
+      <Nav />
+      {component}
+
+      <Cart
+        count={count}
+        key={productArray.product}
+        setCount={setCount}
+        handleReset={handleReset}
+        productArray={productArray}
+        handleRemove={handleRemove}
+        setProductArray={setProductArray}
+      />
+
+      <Fetchdata />
+      <Calculator />
+
+      <FetchMovie />
+    </>
   );
 }
 
